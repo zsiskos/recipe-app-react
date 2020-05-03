@@ -3,7 +3,7 @@ import React from 'react'
 const RecipeCard = props => {
     return (
         <div className='RecipeCard'>
-            The recipes
+            Recipe Card
         </div>
     );
 }
