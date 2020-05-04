@@ -17,13 +17,11 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 let indexRouter = require('./routes/index');
-// let apiRouter = require('./routes/api/api');
 let userRouter = require('./routes/api/users');
 let recipeRouter = require('./routes/api/recipes');
 
 //   FROM RECIPE - APP
 app.use('/', indexRouter);
-// app.use('/api', apiRouter);
 app.use('/api/users', userRouter);
 app.use('/api/recipes', recipeRouter);
 
