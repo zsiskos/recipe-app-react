@@ -33,7 +33,7 @@ function create(req, res) {
             })
             .catch(err => {
                 if (err) return res.redirect('api/users');
-            res.redirect(`api/users/${user.name}`)
+            res.redirect(`api/${user.name}`)
         });
 };
 
