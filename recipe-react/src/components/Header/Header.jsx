@@ -7,7 +7,7 @@ class Header extends Component {
         return (
             //If not logged in show image and join with nav bar at bottom
             <div className='HeaderHome'>
-                <img src="https://i.imgur.com/iPRrXaM.jpg" class="img-fluid" alt="ingredients to make spaghetti"/>
+                <img src="https://i.imgur.com/iPRrXaM.jpg" className="img-fluid" alt="ingredients to make spaghetti"/>
                 <NavBar />
             </div>
 

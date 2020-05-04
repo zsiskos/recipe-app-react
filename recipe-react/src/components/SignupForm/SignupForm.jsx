@@ -6,7 +6,7 @@ import userService from '../../utils/userService';
 class SignupForm extends Component {
 
     state = {
-      name: '',
+      userName: '',
       email: '',
       password: '',
       passwordConf: ''
@@ -24,7 +24,8 @@ class SignupForm extends Component {
       e.preventDefault();
       try {
         await userService.signup(this.state);
-        // Successfully signed up - show GamePage
+        console.log(this.props)
+        // Successfully signed up
         this.props.history.push('/');
       } catch (err) {
         // Invalid user data (probably duplicate email)
@@ -33,7 +34,7 @@ class SignupForm extends Component {
     }
   
     isFormInvalid() {
-      return !(this.state.name && this.state.email && this.state.password === this.state.passwordConf);
+      return !(this.state.userName && this.state.email && this.state.password === this.state.passwordConf);
     }
   
     render() {
@@ -43,7 +44,7 @@ class SignupForm extends Component {
           <form className="form-horizontal" onSubmit={this.handleSubmit} >
             <div className="form-group">
               <div className="col-sm-12">
-                <input type="text" className="form-control" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
+                <input type="text" className="form-control" placeholder="User Name" value={this.state.userName} name="userName" onChange={this.handleChange} />
               </div>
             </div>
             <div className="form-group">

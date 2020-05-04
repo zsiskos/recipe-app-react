@@ -6,8 +6,7 @@ const usersCtrl = require('../controllers/api/user');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'My Recipe Box' });
 });
-router.get
-router.post('/signup', usersCtrl.create);
+router.post('/signup', usersCtrl.signup);
 
 
 module.exports = router;
