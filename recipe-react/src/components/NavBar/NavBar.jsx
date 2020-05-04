@@ -5,7 +5,7 @@ import Search from '../Search/Search'
 const NavBar = (props) => {
     let nav = props.user ?
         <div>
-            <Link to='' className='NavBar-link' onClick={props.handleLogout} >Log out</Link>
+      <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
             <Search />
         </div>
         :

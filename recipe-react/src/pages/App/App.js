@@ -23,7 +23,10 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Header />
+        <Header 
+          user={this.state.user}
+          handleLogout={this.handleLogout}
+        />
         <RecipeBox />
         <Route exact path='/signup' render={({ history }) => 
             <SignupPage
