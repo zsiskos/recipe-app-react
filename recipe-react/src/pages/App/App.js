@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header'
 import RecipeBox from '../../components/RecipeBox/RecipeBox'
 import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
+import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
 
 
 class App extends Component {
@@ -51,6 +52,9 @@ class App extends Component {
                 handleSignupOrLogin={this.handleSignupOrLogin}
               />
           }/>
+          <Route path='/newRecipe' render={(props) => (
+            <CreateRecipePage {...props}/>
+          )}/>
         </Switch>
       </div>
     );

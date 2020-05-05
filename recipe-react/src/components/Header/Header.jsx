@@ -11,6 +11,10 @@ import Button from 'react-bootstrap/Button'
 const Header = (props) => {
     let header = props.user ?
     <Container className='Header'>
+        <NavBar 
+            user={props.user}
+            handleLogout={props.handleLogout}
+        />
         <Row>
             <Col className='col-small-user' sm={4}>
             <Image 
@@ -27,10 +31,6 @@ const Header = (props) => {
                 <p>This is where the person's profile info will go</p>
             </Col>
         </Row>
-            <NavBar 
-                user={props.user}
-                handleLogout={props.handleLogout}
-            />
     </Container>
     :
     <Container>

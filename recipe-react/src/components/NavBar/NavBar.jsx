@@ -11,7 +11,7 @@ const NavBar = (props) => {
     let nav = props.user ?
         <div>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">My Recipe Box</Navbar.Brand>
+                <Navbar.Brand>My Recipe Box</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
