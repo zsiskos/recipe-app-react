@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import userService from '../../utils/userService'
 import Header from '../../components/Header/Header'
 import RecipeBox from '../../components/RecipeBox/RecipeBox'
@@ -29,23 +29,29 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Header 
-          user={this.state.user}
-          handleLogout={this.handleLogout}
-        />
-        <RecipeBox />
-        <Route exact path='/signup' render={({ history }) => 
-            <SignupPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+        <Switch>
+          <Route exact path='/' render={() => 
+            <>
+            <Header 
+              user={this.state.user}
+              handleLogout={this.handleLogout}
             />
+            <RecipeBox />
+            </>
         }/>
-        <Route exact path='/login' render={({ history }) => 
-            <LoginPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
-            />
-        }/>
+          <Route exact path='/signup' render={({ history }) => 
+              <SignupPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+          }/>
+          <Route exact path='/login' render={({ history }) => 
+              <LoginPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+          }/>
+        </Switch>
       </div>
     );
   }
