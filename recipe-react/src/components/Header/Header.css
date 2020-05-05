@@ -1,6 +1,16 @@
 .col-small {
     padding: 15px;
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
 }
+
+.col-small-user {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
 
 .btn {
     padding: 10px 50px;
