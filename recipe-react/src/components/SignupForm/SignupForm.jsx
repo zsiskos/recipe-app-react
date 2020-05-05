@@ -24,7 +24,7 @@ class SignupForm extends Component {
       e.preventDefault();
       try {
         await userService.signup(this.state);
-        console.log(this.props)
+        this.props.handleSignupOrLogin();
         // Successfully signed up
         this.props.history.push('/');
       } catch (err) {
