@@ -1,5 +1,13 @@
-img {
-    height: 50%;
-    width: 50%;
-    border-radius: 5%;
+.col-small {
+    padding: 15px;
 }
+
+.btn {
+    padding: 10px 50px;
+}
+
+.col-small a {
+    color: white;
+    font-weight: 800;
+}
+

@@ -53,14 +53,14 @@ const NavBar = (props) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link>
+
                             <Link
                                 to='/login'
                                 className='NavBar-link'
                             >
                                 Login
                             </Link>
-                        </Nav.Link>
+
                         <Nav.Link>
                             <Link
                                 to='/signup'
