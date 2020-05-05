@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
-class Search extends Component {
-    render() {
-        return (
-            <div className='Search'>
-                <button>Search</button>
+const Search = (props) => {
+    return (
+        <div className='Search'>
+            <form className="form-horizontal" >
+            <div className="form-group">
+              <div className="col-sm-12">
+                <input type="text" className="form-control" placeholder="Search" name="" />
+              </div>
             </div>
-        )
-    }
+            </form>
+        </div>
+    )
 }
 
 export default Search;
