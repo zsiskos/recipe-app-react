@@ -37,12 +37,12 @@ class CreateRecipeForm extends Component {
                 <input type="text" className="form-control" placeholder="Instructions" value={this.state.instructions} name="instructions" onChange={this.handleChange} />
               </div>
             </div>
-            {/* <div className="form-group">
-              <div className="col-sm-12 text-center">
-                <button className="btn btn-default" disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp;
+            <div className="form-group">
+              {/* <div className="col-sm-12 text-center">
+                <button className="btn btn-default" disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp; */}
                 <Link to='/'>Cancel</Link>
               </div>
-            </div> */}
+            {/* </div> */}
           </form>
         </div>
       );
