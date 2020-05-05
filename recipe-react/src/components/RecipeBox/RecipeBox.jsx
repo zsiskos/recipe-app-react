@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import RecipeCard from '../RecipeCard/RecipeCard'
+import './RecipeBox.css'
+import CardColumns from 'react-bootstrap/CardColumns'
+import Card from 'react-bootstrap/Card'
 
 class RecipeBox extends Component {
     render() {
         return (
-            <div className='RecipeBox'>
+            <CardColumns>
                 <RecipeCard />
                 <RecipeCard />
                 <RecipeCard />
-            </div>
+                <RecipeCard />
+                <RecipeCard />
+                <RecipeCard />
+                <RecipeCard />
+                <RecipeCard />
+            </CardColumns>       
         )
     }
 }

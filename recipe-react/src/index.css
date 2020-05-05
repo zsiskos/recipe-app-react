@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+button:focus, .btn:focus {
+  outline: none;
+}
+
+.header-footer {
+  height: 50px;
+  padding: 10px;
+  margin: 15px 0;
+  color: grey;
+  font-size: 18px;
+  text-align: center;
+}
+

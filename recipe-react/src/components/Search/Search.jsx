@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const Search = (props) => {
     return (
         <div className='Search'>
-            <form className="form-horizontal" >
-            <div className="form-group">
-              <div className="col-sm-12">
-                <input type="text" className="form-control" placeholder="Search" name="" />
-              </div>
-            </div>
-            </form>
+            <input type="text" className="form-control" placeholder="Search" name="" />
+            <Button variant="outline-info">Search</Button>
         </div>
     )
 }
