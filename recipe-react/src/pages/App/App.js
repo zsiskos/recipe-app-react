@@ -13,18 +13,22 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      recipes: []
     };
   }
 
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
-    console.log(this.user)
   }
 
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
+  }
+
+  handleUpdateRecipes = (recipes) => {
+    this.setState({ recipes });
   }
 
   render () {
@@ -37,7 +41,7 @@ class App extends Component {
               user={this.state.user}
               handleLogout={this.handleLogout}
             />
-            <RecipeBox />
+            <RecipeBox recipes={this.state.recipes}/>
             </>
         }/>
           <Route exact path='/signup' render={({ history }) => 
