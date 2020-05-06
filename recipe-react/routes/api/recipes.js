@@ -7,6 +7,7 @@ router.get('/search', recipesCtrl.search);
 router.get('/:id', recipesCtrl.showOne);
 
 //MUST BE LOGGED IN TO DO
+router.use(require('../../config/auth'));
 router.post('/newRecipe', recipesCtrl.create);
 router.put('/:id', recipesCtrl.update);
 router.delete('/:id', recipesCtrl.deleteRecipe);

@@ -1,3 +1,4 @@
+import tokenService from './tokenService'
 const BASE_URL = '/api/recipes/';
 
 export default {
@@ -12,7 +13,10 @@ function index() {
 function create(recipe) {
   return fetch(`${BASE_URL}newRecipe`, {
     method: 'POST',
-    headers: {'Content-type': 'application/json'},
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
     body: JSON.stringify(recipe)
   }).then(res => res.json());
 }

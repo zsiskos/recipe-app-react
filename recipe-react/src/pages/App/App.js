@@ -1,6 +1,6 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import userService from '../../utils/userService';
 import recipeService from '../../utils/recipesService'
 import Header from '../../components/Header/Header'
@@ -64,12 +64,13 @@ class App extends Component {
             />
             </>
           }/>
-          <Route exact path='/account' render={() => 
+          <Route exact path='/account' render={({ location }) => 
             <>
             <UserProfile 
               user={this.state.user}
             />
             <RecipeBox 
+              location={location}
               user={this.state.user}
               recipes={this.state.recipes}
               handleUpdateRecipes={this.handleUpdateRecipes}
@@ -88,11 +89,16 @@ class App extends Component {
                 handleSignupOrLogin={this.handleSignupOrLogin}
               />
           }/>
-          <Route path='/newRecipe' render={({ history }) => (
-            <CreateRecipePage
-              history={history} 
-              handleNewRecipe={this.handleNewRecipe}
-            />
+          <Route 
+            path='/newRecipe' 
+            render={({ history }) => (
+              userService.getUser() ?
+                <CreateRecipePage
+                  history={history} 
+                  handleNewRecipe={this.handleNewRecipe}
+                />
+              :
+              <Redirect to='/login' />
           )}/>
         </Switch>
       </div>

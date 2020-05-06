@@ -34,7 +34,7 @@ class CreateRecipePage extends Component {
         this.updateMessage(err.message);
       }   
     } 
-    
+
 
   render() {
     return (
