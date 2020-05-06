@@ -12,6 +12,7 @@ const RecipeCard = props => {
             <Card.Body>
             <Card.Title>{props.recipe.title} ({props.recipe.category})</Card.Title>
             <Card.Text>{props.recipe.tags}</Card.Text>
+            <Card.Text>Created by: {props.recipe.createdBy}</Card.Text>
             </Card.Body>
         </Card>
     );

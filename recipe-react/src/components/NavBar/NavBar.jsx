@@ -12,7 +12,13 @@ const NavBar = (props) => {
         <div>
             
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand>My Recipe Box</Navbar.Brand>
+                <Navbar.Brand>
+                    <Link 
+                        to='/account'
+                    >
+                        My Recipe Box
+                    </Link>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -24,10 +30,10 @@ const NavBar = (props) => {
                         </Link>
                         &nbsp;&nbsp;&nbsp;
                         <Link
-                            to=''
+                            to='/'
                             className='NavBar-link'
                         >
-                            Account
+                            Home
                         </Link>
                         &nbsp;&nbsp;&nbsp;
                         <Link

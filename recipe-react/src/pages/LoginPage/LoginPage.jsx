@@ -22,7 +22,7 @@ class LoginPage extends Component {
           await userService.login(this.state);
           this.props.handleSignupOrLogin();
           // Successfully signed up
-          this.props.history.push('/');
+          this.props.history.push('/account');
         } catch (err) {
           // Invalid user data (probably duplicate email)
           alert('Invalid');

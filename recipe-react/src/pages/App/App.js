@@ -7,6 +7,7 @@ import RecipeBox from '../../components/RecipeBox/RecipeBox'
 import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
 import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
+import UserProfile from '../../components/UserProfile/UserProfile'
 
 class App extends Component {
   constructor() {
@@ -46,12 +47,24 @@ class App extends Component {
               handleUpdateRecipes={this.handleUpdateRecipes}
             />
             </>
-        }/>
+          }/>
+          <Route exact path='/account' render={({ history }) => 
+            <>
+            <UserProfile 
+              user={this.state.user}
+            />
+            <RecipeBox 
+              user={this.state.user}
+              recipes={this.state.recipes}
+              handleUpdateRecipes={this.handleUpdateRecipes}
+            />
+            </>
+          }/>
           <Route exact path='/signup' render={({ history }) => 
-              <SignupPage
-                history={history}
-                handleSignupOrLogin={this.handleSignupOrLogin}
-              />
+            <SignupPage
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+            />
           }/>
           <Route exact path='/login' render={({ history }) => 
               <LoginPage
