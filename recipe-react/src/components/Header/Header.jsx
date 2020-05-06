@@ -7,10 +7,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import CookingLottie from '../CookingLottie/CookingLottie';
+import { format } from 'date-fns'
 
 
-const Header = (props) => {
+const Header = (props) => { 
+    var date = new Date(props.user.createdAt);
+    var formattedDate = format(date, "MMMM d, yyyy");    
     let header = props.user ?
     <Container className='Header'>
         <NavBar 
@@ -32,7 +34,8 @@ const Header = (props) => {
             <Col className='col-bigger' sm={8}>
                 <p className='userName'>{props.user.userName}</p>
                 <p>Food preferences:{props.user.foodPreferences}</p>
-                <p>Member since: {props.user.createdAt}</p>
+                <p>Member since: {formattedDate}</p>
+                
             </Col>
         </Row>
     </Container>

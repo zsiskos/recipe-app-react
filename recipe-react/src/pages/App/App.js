@@ -41,6 +41,7 @@ class App extends Component {
               handleLogout={this.handleLogout}
             />
             <RecipeBox 
+              user={this.state.user}
               recipes={this.state.recipes}
               handleUpdateRecipes={this.handleUpdateRecipes}
             />
@@ -59,9 +60,7 @@ class App extends Component {
               />
           }/>
           <Route path='/newRecipe' render={(props) => (
-            <>
             <CreateRecipePage {...props}/>
-            </>
           )}/>
         </Switch>
       </div>
