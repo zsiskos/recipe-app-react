@@ -17,7 +17,7 @@ const NavBar = (props) => {
                     <Nav className="mr-auto">
                         <Nav.Link>
                             <Link
-                                to=''
+                                to='/newRecipe'
                                 className='NavBar-link'
                             >
                                 New Recipe

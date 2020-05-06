@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import recipeService from '../../utils/recipesService'
 
 class CreateRecipeForm extends Component {
 
@@ -12,6 +13,25 @@ class CreateRecipeForm extends Component {
         createdBy: ''
     };
   
+    handleChange = (e) => {
+        this.props.updateMessage('');
+        this.setState({
+          // Using ES2015 Computed Property Names
+          [e.target.name]: e.target.value
+        });
+    }
+    
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await recipeService.create(this.state.title, this.state.category, this.state.instructions);
+            this.props.history.push('/');
+        } catch (err) {
+            // Invalid user data (probably duplicate email)
+            this.props.updateMessage(err.message);
+        }   
+    }  
+
     render() {
       return (
         <div>
@@ -38,11 +58,11 @@ class CreateRecipeForm extends Component {
               </div>
             </div>
             <div className="form-group">
-              {/* <div className="col-sm-12 text-center">
-                <button className="btn btn-default" disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp; */}
+              <div className="col-sm-12 text-center">
+                <button className="btn btn-default" >Submit</button>&nbsp;&nbsp;
                 <Link to='/'>Cancel</Link>
               </div>
-            {/* </div> */}
+            </div>
           </form>
         </div>
       );

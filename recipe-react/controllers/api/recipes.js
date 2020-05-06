@@ -40,16 +40,25 @@ function showOne(req, res) {
         });
 };
 
-function create(req, res) {
-    Recipe.create(req.body)
-        .then(recipe => {
-            res.json(recipe);
-        })
-        .catch(err => {
-            if (err) return res.redirect('api/recipes');
-        res.redirect(`api/recipe/${recipe._id}`)
-    });
-};
+async function create(req, res) {
+    try {
+      await Recipe.create(req.body);
+    } catch (err) {
+      res.json({err});
+    }
+  }
+
+
+// function create(req, res) {
+//     Recipe.create(req.body)
+//         .then(recipe => {
+//             res.json(recipe);
+//         })
+//         .catch(err => {
+//             if (err) return res.redirect('api/recipes');
+//         res.redirect(`api/recipe/${recipe._id}`)
+//     });
+// };
 
 function update(req, res) {
     Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true})
