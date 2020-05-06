@@ -8,18 +8,17 @@ import Nav from 'react-bootstrap/Nav'
 
 
 class RecipeBox extends Component {
-
     async componentDidMount() {
         const recipes = await recipesService.index();
         this.props.handleUpdateRecipes(recipes);
     }
 
     render() {
-        const recipeCard = this.props.recipes.map((recipe, idx) => ( 
-            <RecipeCard key={idx} recipe={recipe}/> 
+        const recipeCard = this.props.recipes.map((recipe, idx) => (
+            <RecipeCard key={idx} recipe={recipe} />
         ));
 
-        return (
+        let recipeBox = this.props.user ?
             <Container>
                 <Nav variant="tabs" defaultActiveKey="/">
                     <Nav.Item>
@@ -31,12 +30,21 @@ class RecipeBox extends Component {
                 </Nav>
                 <CardColumns>
                     {recipeCard}
-                </CardColumns>   
-            </Container> 
-  
+                </CardColumns>
+            </Container>
+            :
+            <Container>
+                <CardColumns>
+                    {recipeCard}
+                </CardColumns>
+            </Container>
+        return (
+            <div>
+                {recipeBox}
+            </div>
+
         )
     }
 }
-
 
 export default RecipeBox;

@@ -10,7 +10,6 @@ import Form from 'react-bootstrap/Form'
 const NavBar = (props) => {
     let nav = props.user ?
         <div>
-            
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand>
                     <Link 
