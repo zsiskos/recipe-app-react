@@ -10,36 +10,33 @@ import Form from 'react-bootstrap/Form'
 const NavBar = (props) => {
     let nav = props.user ?
         <div>
+            
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand>My Recipe Box</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link>
-                            <Link
-                                to='/newRecipe'
-                                className='NavBar-link'
-                            >
-                                New Recipe
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
+                        <Link
+                            to='/newRecipe'
+                            className='NavBar-link'
+                        >
+                            New Recipe
+                        </Link>
+                        &nbsp;&nbsp;&nbsp;
                         <Link
                             to=''
                             className='NavBar-link'
                         >
                             Account
                         </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link
-                                to=''
-                                className='NavBar-link'
-                                onClick={props.handleLogout}
-                            >
-                                Logout
-                            </Link>
-                        </Nav.Link>
+                        &nbsp;&nbsp;&nbsp;
+                        <Link
+                            to=''
+                            className='NavBar-link'
+                            onClick={props.handleLogout}
+                        >
+                            Logout
+                        </Link>
                     </Nav>
                     <Form inline>
                         <Search />
@@ -47,28 +44,25 @@ const NavBar = (props) => {
                 </Navbar.Collapse>
             </Navbar>
         </div>
-    :
+        :
         <div>
             <Navbar bg="light" expand="lg">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-
-                            <Link
-                                to='/login'
-                                className='NavBar-link'
-                            >
-                                Login
-                            </Link>
-
-                        <Nav.Link>
-                            <Link
-                                to='/signup'
-                                className='NavBar-link'
-                            >
-                                Register
-                            </Link>
-                        </Nav.Link>
+                        <Link
+                            to='/login'
+                            className='NavBar-link'
+                        >
+                            Login
+                        </Link>
+                        &nbsp;&nbsp;&nbsp;
+                        <Link
+                            to='/signup'
+                            className='NavBar-link'
+                        >
+                            Register
+                        </Link>
                     </Nav>
                     <Form inline>
                         <Search />

@@ -4,6 +4,7 @@ import './RecipeBox.css'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Container from 'react-bootstrap/Container'
 import recipesService from '../../utils/recipesService'
+import Nav from 'react-bootstrap/Nav'
 
 
 class RecipeBox extends Component {
@@ -15,36 +16,27 @@ class RecipeBox extends Component {
 
     render() {
         const recipeCard = this.props.recipes.map((recipe, idx) => ( 
-            <RecipeCard recipe={recipe}/> 
+            <RecipeCard key={idx} recipe={recipe}/> 
         ));
 
         return (
             <Container>
+                <Nav variant="tabs" defaultActiveKey="/">
+                    <Nav.Item>
+                        <Nav.Link href="/">My Recipes</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="link-1"> Saved Recipes</Nav.Link>
+                    </Nav.Item>
+                </Nav>
                 <CardColumns>
                     {recipeCard}
                 </CardColumns>   
-            </Container>    
+            </Container> 
+  
         )
     }
 }
 
-// class RecipeBox extends Component {
-//     render() {
-//         return (
-//             <Container>
-//                 <CardColumns>
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                     <RecipeCard />
-//                 </CardColumns>   
-//             </Container>    
-//         )
-//     }
-// }
 
 export default RecipeBox;
