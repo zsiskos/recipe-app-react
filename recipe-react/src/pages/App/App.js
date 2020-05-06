@@ -41,7 +41,10 @@ class App extends Component {
               user={this.state.user}
               handleLogout={this.handleLogout}
             />
-            <RecipeBox recipes={this.state.recipes}/>
+            <RecipeBox 
+              recipes={this.state.recipes}
+              handleUpdateRecipes={this.handleUpdateRecipes}
+            />
             </>
         }/>
           <Route exact path='/signup' render={({ history }) => 

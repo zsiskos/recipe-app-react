@@ -5,13 +5,10 @@ import Card from 'react-bootstrap/Card'
 const RecipeCard = props => {
     return (
         <Card>
-            <Card.Img variant="top" src="https://i.imgur.com/iPRrXaM.jpg" />
+            <Card.Img variant="top" src="{{props.recipe.photo}}" />
             <Card.Body>
-            <Card.Title>Title of the Recipe</Card.Title>
-            <Card.Text>
-                This is a longer card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-            </Card.Text>
+            <Card.Title>{props.recipe.title} ({props.recipe.category})</Card.Title>
+            <Card.Text>{props.recipe.tags}</Card.Text>
             </Card.Body>
         </Card>
     );

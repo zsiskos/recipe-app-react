@@ -10,21 +10,18 @@ class RecipeBox extends Component {
 
     async componentDidMount() {
         const recipes = await recipesService.index();
-        this.props.handleUpdatesRecipes(recipes);
+        this.props.handleUpdateRecipes(recipes);
     }
 
     render() {
+        const recipeCard = this.props.recipes.map((recipe, idx) => ( 
+            <RecipeCard recipe={recipe}/> 
+        ));
+
         return (
             <Container>
                 <CardColumns>
-                    <RecipeCard />
-                    <RecipeCard />
-                    <RecipeCard />
-                    <RecipeCard />
-                    <RecipeCard />
-                    <RecipeCard />
-                    <RecipeCard />
-                    <RecipeCard />
+                    {recipeCard}
                 </CardColumns>   
             </Container>    
         )
