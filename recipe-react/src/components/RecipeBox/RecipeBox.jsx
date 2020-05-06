@@ -8,6 +8,7 @@ import Nav from 'react-bootstrap/Nav'
 
 
 class RecipeBox extends Component {
+    
     async componentDidMount() {
         const recipes = await recipesService.index();
         this.props.handleUpdateRecipes(recipes);
@@ -17,12 +18,12 @@ class RecipeBox extends Component {
         const recipeCard = this.props.recipes.map((recipe, idx) => (
             <RecipeCard key={idx} recipe={recipe} />
         ));
-
+        
         let recipeBox = this.props.user ?
             <Container>
                 <Nav variant="tabs" defaultActiveKey="/">
                     <Nav.Item>
-                        <Nav.Link href="/">My Recipes</Nav.Link>
+                        <Nav.Link href="/">{this.props.user.userName}'s Recipes</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="link-1"> Saved Recipes</Nav.Link>
@@ -38,6 +39,7 @@ class RecipeBox extends Component {
                     {recipeCard}
                 </CardColumns>
             </Container>
+        
         return (
             <div>
                 {recipeBox}

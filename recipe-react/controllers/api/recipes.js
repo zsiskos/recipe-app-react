@@ -24,7 +24,6 @@ function index(req, res) {
 
 function search(req, res) {
     let search = req.query.tags;
-    console.log(search);
     Recipe.find({tags: search})
         .then(recipes => {
             res.status(200).json(recipes);
@@ -42,12 +41,12 @@ function showOne(req, res) {
 
 async function create(req, res) {
     try {
-      await Recipe.create(req.body);
+        const recipe = await Recipe.create(req.body);
+        res.json(recipe);
     } catch (err) {
-      res.json({err});
+        res.json({err});
     }
-  }
-
+}
 
 // function create(req, res) {
 //     Recipe.create(req.body)

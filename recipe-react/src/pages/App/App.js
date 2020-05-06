@@ -1,13 +1,15 @@
 import React, { Component} from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import userService from '../../utils/userService'
+import userService from '../../utils/userService';
+import recipeService from '../../utils/recipesService'
 import Header from '../../components/Header/Header'
 import RecipeBox from '../../components/RecipeBox/RecipeBox'
 import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
 import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
 import UserProfile from '../../components/UserProfile/UserProfile'
+
 
 class App extends Component {
   constructor() {
@@ -31,6 +33,20 @@ class App extends Component {
     this.setState({ recipes });
   }
 
+  handleNewRecipe = (recipe) => {
+    console.log(recipe)
+    this.setState(state => ({
+      recipes: [...state.recipes, recipe]
+    }),
+    () => {
+      this.props.history.push('/')})
+  }
+
+  async componentDidMount() {
+    const recipes = await recipeService.index();
+    this.setState({recipes});
+  }
+
   render () {
     return (
       <div className="App">
@@ -48,7 +64,7 @@ class App extends Component {
             />
             </>
           }/>
-          <Route exact path='/account' render={({ history }) => 
+          <Route exact path='/account' render={() => 
             <>
             <UserProfile 
               user={this.state.user}
@@ -72,8 +88,11 @@ class App extends Component {
                 handleSignupOrLogin={this.handleSignupOrLogin}
               />
           }/>
-          <Route path='/newRecipe' render={(props) => (
-            <CreateRecipePage {...props}/>
+          <Route path='/newRecipe' render={({ history }) => (
+            <CreateRecipePage
+              history={history} 
+              handleNewRecipe={this.handleNewRecipe}
+            />
           )}/>
         </Switch>
       </div>

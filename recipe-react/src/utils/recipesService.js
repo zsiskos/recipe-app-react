@@ -1,4 +1,4 @@
-const BASE_URL = '/api/recipes';
+const BASE_URL = '/api/recipes/';
 
 export default {
     index,
@@ -10,12 +10,10 @@ function index() {
 }
 
 function create(recipe) {
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify(recipe)
-    };
-    return fetch(BASE_URL, options).then(res => res.json());
-  }
+  return fetch(`${BASE_URL}newRecipe`, {
+    method: 'POST',
+    headers: {'Content-type': 'application/json'},
+    body: JSON.stringify(recipe)
+  }).then(res => res.json());
+}
+

@@ -5,34 +5,29 @@ import './CreateRecipeForm.css'
 
 
 class CreateRecipeForm extends Component {
-
     state = {
         title: '',
         category: '',
         ingredients: '',
-        instructions: '',
-        tags: [],
-        createdBy: ''
+        instructions: ''
     };
-  
-    handleChange = (e) => {
-        this.props.updateMessage('');
-        this.setState({
-          // Using ES2015 Computed Property Names
-          [e.target.name]: e.target.value
-        });
-    }
-    
+
     handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            await recipeService.create(this.state.title, this.state.category, this.state.instructions);
-            this.props.history.push('/');
+      e.preventDefault();
+      try {
+        await recipeService.create(this.state);
+        this.props.handleNewRecipe();
         } catch (err) {
-            // Invalid user data (probably duplicate email)
-            this.props.updateMessage(err.message);
+          this.props.updateMessage(err.message);
         }   
-    }  
+      } 
+      
+      handleChange = (e) => {
+          this.props.updateMessage('');
+          this.setState({
+            [e.target.name]: e.target.value
+          });
+      }
 
     render() {
       return (
@@ -61,8 +56,19 @@ class CreateRecipeForm extends Component {
             </div>
             <div className="form-group">
               <div className="col-sm-12 text-center">
-                <button className="btn btn-default" >Submit</button>&nbsp;&nbsp;
-                <Link to='/'>Cancel</Link>
+                <button 
+                  type="submit"
+                  className="btn btn-default"
+                  disabled={this.state.invalidForm}
+                >
+                  Submit
+                </button>
+                &nbsp;&nbsp;
+                <Link 
+                  to='/'
+                >
+                  Cancel
+                </Link>
               </div>
             </div>
           </form>

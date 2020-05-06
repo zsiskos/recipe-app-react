@@ -18,7 +18,7 @@ const UserProfile = (props) => {
             <Row>
                 <Col className='col-small-user' sm={4}>
                 <Image 
-                    src="https://quiviracoalition.org/wp-content/uploads/2019/02/generic-person-icon-300x300.png" 
+                    src={props.user.photo ? props.user.photo : "https://quiviracoalition.org/wp-content/uploads/2019/02/generic-person-icon-300x300.png"}
                     roundedCircle
                     style={{
                         height: 171,
