@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import recipeService from '../../utils/recipesService'
+import './CreateRecipeForm.css'
+
 
 class CreateRecipeForm extends Component {
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CreateRecipeForm from '../../components/CreateRecipeForm/CreateRecipeForm';
 import './CreateRecipePage.css'
+import CookingLottie from '../../components/CookingLottie/CookingLottie';
 
 
 class CreateRecipePage extends Component {
@@ -16,6 +17,9 @@ class CreateRecipePage extends Component {
   render() {
     return (
       <div className='CreateRecipePage'>
+        <div className="lottie">
+          <CookingLottie />
+        </div>
         <CreateRecipeForm 
             {...this.props} 
             updateMessage={this.updateMessage} 

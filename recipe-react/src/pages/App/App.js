@@ -8,7 +8,6 @@ import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
 import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -60,7 +59,9 @@ class App extends Component {
               />
           }/>
           <Route path='/newRecipe' render={(props) => (
+            <>
             <CreateRecipePage {...props}/>
+            </>
           )}/>
         </Switch>
       </div>
