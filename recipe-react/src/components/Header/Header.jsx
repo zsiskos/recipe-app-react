@@ -28,7 +28,9 @@ const Header = (props) => {
             />
             </Col>
             <Col className='col-bigger' sm={8}>
-                <p>This is where the person's profile info will go</p>
+                <p className='userName'>{props.user.userName}</p>
+                <p>Food preferences:{props.user.foodPreferences}</p>
+                <p>Member since: {props.user.createdAt}</p>
             </Col>
         </Row>
     </Container>
