@@ -8,7 +8,8 @@ import RecipeBox from '../../components/RecipeBox/RecipeBox'
 import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
 import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
-import UserProfile from '../../components/UserProfile/UserProfile'
+import UserProfile from '../../components/UserProfile/UserProfile';
+import NavBar from 'react-bootstrap/Nav'
 
 
 class App extends Component {
@@ -57,6 +58,7 @@ class App extends Component {
               user={this.state.user}
               handleLogout={this.handleLogout}
             />
+
             <RecipeBox 
               user={this.state.user}
               recipes={this.state.recipes}

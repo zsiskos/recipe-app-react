@@ -7,41 +7,44 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Jumbotron from 'react-bootstrap/Jumbotron'
 
 
 const Header = (props) => {  
     let header = props.user ?
-    <Container className='Header'>
-        <NavBar 
-            user={props.user}
-            handleLogout={props.handleLogout}
-            sticky="top"
-        />
+    <Container className='con-head'>
+            <NavBar 
+                user={props.user}
+                handleLogout={props.handleLogout}
+            />
     </Container>
     :
-    <Container >
-        <Row>
-        <Col className='col-small' sm={4}>
-            <Image src="https://i.imgur.com/YUceMfV.png" fluid />
-                <Button variant="info">
+    <Container className='con-head' fluid>
+        <Container>
+            <Jumbotron>
+                <h1>My Recipe Box</h1>
+                <p>
+                    Create, share, and find your favourite recipes. 
+                </p>
+                <p>
+                <Button variant="light">
                     <Link
                         to='/signup'
-                        className='NavBar-link'
                     >
                         Join
                     </Link>
                 </Button>
-            </Col>
-            <Col className='col-bigger' sm={8}>
-                 <Image src="https://i.imgur.com/HKcS8Cx.png" fluid />
-            </Col>
-        </Row>
+                </p>
+            </Jumbotron>
+        </Container>
             <NavBar 
-                user={props.user}
-                handleLogout={props.handleLogout}
-                sticky="top"
+                    user={props.user}
+                    handleLogout={props.handleLogout}
+                    fixed="top"
             />
+
     </Container>
+    
     return (
         <div className='NavBar'>
             {header}

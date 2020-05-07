@@ -1,3 +1,20 @@
+.jumbotron {
+    background-color: transparent;
+    color: white;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+.jumbotron.p {
+    font-size: 75px;
+}
+
+.con-head {
+    background: url(https://i.imgur.com/HKcS8Cx.png);
+}
+
 .col-small {
     padding: 15px;
     display: flex;

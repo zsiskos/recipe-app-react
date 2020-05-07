@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form'
 const NavBar = (props) => {
     let nav = props.user ?
         <div>
-            <Navbar variant='light' bg="light" expand="lg">
+            <Navbar variant='light' bg="white" expand="lg">
                 <Navbar.Brand>
                     <Link 
                         to='/account'
@@ -50,8 +50,7 @@ const NavBar = (props) => {
             </Navbar>
         </div>
         :
-        <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar varient='light' bg="light" expand="lg">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -74,7 +73,7 @@ const NavBar = (props) => {
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
-        </div>
+    
 
     return (
         <div className='NavBar'>

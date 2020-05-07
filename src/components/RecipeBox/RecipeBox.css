@@ -1,3 +1,3 @@
-.nav {
-    margin: 10px 0px;
+.card-columns {
+    column-count: 6;
 }

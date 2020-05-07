@@ -5,7 +5,7 @@ import './RecipeCard.css'
 
 const RecipeCard = props => {
     return (
-        <Card>
+        <Card >
             <Card.Img 
                 variant="top"
                 src='https://i.imgur.com/iPRrXaM.jpg'
