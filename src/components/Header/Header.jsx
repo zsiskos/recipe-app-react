@@ -19,16 +19,12 @@ const Header = (props) => {
             <Jumbotron>
                 <h1>Add to your recipe box</h1>
                 <p>
-                    Create your own or search look though other people's recipes below
+                    Create your own or search though other people's recipes below
                 </p>
                 <p>
-                <Button variant="outline-info" className='join-btn'>
-                    <Link
-                        to='/newRecipe'
-                    >
+                    <Link to='/newRecipe'>
                         Create
                     </Link>
-                </Button>
                 </p>
             </Jumbotron>
         </Container>
@@ -47,13 +43,9 @@ const Header = (props) => {
                     Create, share, and find your favourite recipes. 
                 </p>
                 <p>
-                <Button variant="outline-info" className='join-btn'>
-                    <Link
-                        to='/signup'
-                    >
-                        Join
+                    <Link to='/newRecipe'>
+                        Create
                     </Link>
-                </Button>
                 </p>
             </Jumbotron>
         </Container>

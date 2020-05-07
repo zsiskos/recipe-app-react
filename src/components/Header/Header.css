@@ -45,13 +45,19 @@ p {
     color: #17a2b8!important;
 }
 
-.a {
+a {
     color: #17a2b8;
+    border: 1px solid #17a2b8;
+    padding: 10px 20px;
+    border-radius: 9%;
+    background: white;
+    font-weight: 600;
     text-decoration: none;
 }
 
 a:hover {
-    color: #0056b3;
+    background: #17a2b8;
+    color: white;
     text-decoration: none;
 }
 
