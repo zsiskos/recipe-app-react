@@ -4,6 +4,7 @@ import './RecipeBox.css'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Container from 'react-bootstrap/Container'
 import recipesService from '../../utils/recipesService'
+import userService from '../../utils/userService'
 import Nav from 'react-bootstrap/Nav'
 
 
@@ -15,9 +16,19 @@ class RecipeBox extends Component {
     }
 
     render() {
-        const recipeCard = this.props.recipes.map((recipe, idx) => (
-            <RecipeCard key={idx} recipe={recipe} />
+        let myRecipes = this.props.recipes.filter(myRecipe => {
+            return myRecipe.createdBy === this.props.user._id
+
+        });
+
+        const myRecipeCard = myRecipes.map((recipe, idx) => (
+            <RecipeCard key={idx} recipe={recipe} location={this.props.location} createdBy={recipe.createdBy}/>
         ));
+        
+        const recipeCard = this.props.recipes.map((recipe, idx) => (
+            <RecipeCard key={idx} recipe={recipe} location={this.props.location} createdBy={recipe.createdBy}/>
+        ));
+
         
         let recipeBox = this.props.user ?
             <Container>
@@ -30,7 +41,7 @@ class RecipeBox extends Component {
                     </Nav.Item>
                 </Nav>}
                 <CardColumns>
-                    {recipeCard}
+                    {myRecipeCard}
                 </CardColumns>
             </Container>
             :

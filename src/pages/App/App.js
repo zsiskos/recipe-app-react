@@ -52,7 +52,7 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path='/' render={() => 
+          <Route exact path='/' render={({ location }) => 
             <>
             <Header 
               user={this.state.user}
@@ -63,6 +63,7 @@ class App extends Component {
               user={this.state.user}
               recipes={this.state.recipes}
               handleUpdateRecipes={this.handleUpdateRecipes}
+              location={location}
             />
             </>
           }/>
