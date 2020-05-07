@@ -19,7 +19,7 @@ const Header = (props) => {
             <Jumbotron>
                 <h1>Add to your recipe box</h1>
                 <p>
-                    Create your own or search though other people's recipes below
+                    Create your own or search for other people's recipes below
                 </p>
                 <p>
                     <Link to='/newRecipe'>
