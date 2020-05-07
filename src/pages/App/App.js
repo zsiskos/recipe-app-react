@@ -9,8 +9,6 @@ import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
 import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
 import UserProfile from '../../components/UserProfile/UserProfile';
-import NavBar from 'react-bootstrap/Nav'
-
 
 class App extends Component {
   constructor() {

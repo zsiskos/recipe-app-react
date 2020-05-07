@@ -1,8 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar'
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import { Link } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

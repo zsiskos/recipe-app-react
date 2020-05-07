@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import RecipeCard from '../RecipeCard/RecipeCard'
-import './RecipeBox.css'
-import CardColumns from 'react-bootstrap/CardColumns'
-import Container from 'react-bootstrap/Container'
-import recipesService from '../../utils/recipesService'
-import userService from '../../utils/userService'
-import Nav from 'react-bootstrap/Nav'
+import RecipeCard from '../RecipeCard/RecipeCard';
+import './RecipeBox.css';
+import CardColumns from 'react-bootstrap/CardColumns';
+import Container from 'react-bootstrap/Container';
+import recipesService from '../../utils/recipesService';
+import Nav from 'react-bootstrap/Nav';
 
 
 class RecipeBox extends Component {
@@ -16,10 +15,12 @@ class RecipeBox extends Component {
     }
 
     render() {
-        let myRecipes = this.props.recipes.filter(myRecipe => {
-            return myRecipe.createdBy === this.props.user._id
-
-        });
+        const myRecipes = this.props.user ?
+            this.props.recipes.filter(myRecipe => {
+                return myRecipe.createdBy === this.props.user._id
+            })
+            :
+            this.props.recipes
 
         const myRecipeCard = myRecipes.map((recipe, idx) => (
             <RecipeCard key={idx} recipe={recipe} location={this.props.location} createdBy={recipe.createdBy}/>

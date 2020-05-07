@@ -2,7 +2,6 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import './RecipeCard.css'
 
-
 const RecipeCard = props => {
     return (
           <Card >
