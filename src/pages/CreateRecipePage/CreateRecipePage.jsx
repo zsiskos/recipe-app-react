@@ -88,13 +88,13 @@ class CreateRecipePage extends Component {
               <div className="col-sm-12 text-center">
                 <button 
                   type="submit"
-                  className="btn btn-default"
+                  className="btn-submit"
                   disabled={this.state.invalidForm}
                 >
                   Submit
                 </button>
                 &nbsp;&nbsp;
-                <Link 
+                <Link className='btn-cancel'
                   to='/account'
                 >
                   Cancel
