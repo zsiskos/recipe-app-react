@@ -8,7 +8,7 @@ const RecipeCard = props => {
         <Card >
             <Card.Img 
                 variant="top"
-                src='https://i.imgur.com/iPRrXaM.jpg'
+                src='https://i.imgur.com/51COkw0.png'
                 // src={props.recipe.photo ? props.recipe.photo : 'https://i.imgur.com/iPRrXaM.jpg'}
             />
             <Card.Body>

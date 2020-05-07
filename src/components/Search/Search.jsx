@@ -6,7 +6,7 @@ const Search = (props) => {
         <div className='Search'>
             <input type="text" className="form-control" placeholder="Search" name="" />
             &nbsp;&nbsp;&nbsp;
-            <Button variant="outline-info">Search</Button>
+            <Button variant="info">Search</Button>
         </div>
     )
 }

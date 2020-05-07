@@ -1,5 +1,6 @@
 .jumbotron {
-    background-color: transparent;
+    background-color:rgb(39,39,39, 0.2);
+
     color: white;
 }
 
@@ -12,7 +13,9 @@ h1 {
 }
 
 .con-head {
-    background: url(https://i.imgur.com/HKcS8Cx.png);
+    background: url('../../images/kitchen-blue.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .col-small {
@@ -30,13 +33,26 @@ h1 {
 
 .btn {
     padding: 10px 50px;
-}
 
-.col-small a {
-    color: white;
-    font-weight: 800;
 }
 
 .userName {
     font-size: 46px;
 }
+
+.join-btn {
+    background: white;
+    text-decoration: none;
+    color: #17a2b8!important;
+}
+
+.a {
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+

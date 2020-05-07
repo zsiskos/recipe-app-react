@@ -22,6 +22,7 @@ class RecipeBox extends Component {
         let recipeBox = this.props.user ?
             <Container fluid>
                {this.props.location && this.props.location.pathname === "/account" && <Nav variant="tabs" defaultActiveKey="/">
+                    
                     <Nav.Item>
                         <Nav.Link href="/">{this.props.user.userName}'s Recipes</Nav.Link>
                     </Nav.Item>
@@ -34,7 +35,7 @@ class RecipeBox extends Component {
                 </CardColumns>
             </Container>
             :
-            <Container fluid>
+            <Container className='RecipeBox'>
                 <CardColumns>
                     {recipeCard}
                 </CardColumns>
