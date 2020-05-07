@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './CreateRecipePage.css'
+import './CreateRecipePage.css';
 import CookingLottie from '../../components/CookingLottie/CookingLottie';
 import { Link } from 'react-router-dom';
-import recipeService from '../../utils/recipesService'
+import recipeService from '../../utils/recipesService';
+import userService from '../../utils/userService';
 
 
 class CreateRecipePage extends Component {
@@ -11,7 +12,8 @@ class CreateRecipePage extends Component {
       title: '',
       category: '',
       ingredients: '',
-      instructions: ''
+      instructions: '',
+      createdBy: userService.getUser(),
     }
 
   updateMessage = (msg) => {
