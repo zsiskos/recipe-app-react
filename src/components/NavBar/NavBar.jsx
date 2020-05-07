@@ -36,7 +36,7 @@ const NavBar = (props) => {
                         </Link>
                         &nbsp;&nbsp;&nbsp;
                         <Link
-                            to=''
+                            to='/'
                             className='NavBar-link'
                             onClick={props.handleLogout}
                         >
@@ -62,10 +62,10 @@ const NavBar = (props) => {
                         </Link>
                         &nbsp;&nbsp;&nbsp;
                         <Link
-                            to='/signup'
+                            to=''
                             className='NavBar-link'
                         >
-                            Register
+                            About
                         </Link>
                     </Nav>
                     <Form inline>

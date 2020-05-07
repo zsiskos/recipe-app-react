@@ -70,12 +70,14 @@ class App extends Component {
             <>
             <UserProfile 
               user={this.state.user}
+              handleLogout={this.handleLogout}
             />
             <RecipeBox 
               location={location}
               user={this.state.user}
               recipes={this.state.recipes}
               handleUpdateRecipes={this.handleUpdateRecipes}
+
             />
             </>
           }/>
