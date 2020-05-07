@@ -1,4 +1,8 @@
 .RecipeCard {
     display: inline-block;
+
 }
 
+.card {
+    box-shadow: 5px 5px 15px -7px #272727;
+}

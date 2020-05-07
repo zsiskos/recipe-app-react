@@ -15,12 +15,13 @@ const Header = (props) => {
         <NavBar 
             user={props.user}
             handleLogout={props.handleLogout}
+            sticky="top"
         />
     </Container>
     :
-    <Container>
+    <Container >
         <Row>
-            <Col className='col-small' sm={4}>
+        <Col className='col-small' sm={4}>
             <Image src="https://i.imgur.com/YUceMfV.png" fluid />
                 <Button variant="info">
                     <Link
@@ -31,11 +32,14 @@ const Header = (props) => {
                     </Link>
                 </Button>
             </Col>
-            <Col className='col-bigger' sm={8}><Image src="https://i.imgur.com/iPRrXaM.jpg" fluid /></Col>
+            <Col className='col-bigger' sm={8}>
+                 <Image src="https://i.imgur.com/HKcS8Cx.png" fluid />
+            </Col>
         </Row>
             <NavBar 
                 user={props.user}
                 handleLogout={props.handleLogout}
+                sticky="top"
             />
     </Container>
     return (

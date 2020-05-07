@@ -4,7 +4,8 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { format } from 'date-fns'
+import { format } from 'date-fns';
+import './UserProfile.css';
 
 const UserProfile = (props) => { 
     let date = new Date(props.user.createdAt);
@@ -15,7 +16,7 @@ const UserProfile = (props) => {
                 user={props.user}
                 handleLogout={props.handleLogout}
             />
-            <Row>
+            <Row className='profile'>
                 <Col className='col-small-user' sm={4}>
                 <Image 
                     src={props.user.photo ? props.user.photo : "https://quiviracoalition.org/wp-content/uploads/2019/02/generic-person-icon-300x300.png"}
