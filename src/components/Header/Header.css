@@ -1,11 +1,10 @@
 .jumbotron {
     background-color:rgb(39,39,39, 0.2);
-
     color: white;
 }
 
 h1 {
-    font-size: 75px;
+    font-size: 60px;
 }
 
 p {

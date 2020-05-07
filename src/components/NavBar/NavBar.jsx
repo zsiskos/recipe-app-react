@@ -73,7 +73,6 @@ const NavBar = (props) => {
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
-    
 
     return (
         <div className='NavBar'>
