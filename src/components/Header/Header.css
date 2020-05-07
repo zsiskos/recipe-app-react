@@ -30,22 +30,11 @@ p {
     justify-content: center;
 }
 
-.btn {
-    padding: 10px 50px;
-
-}
-
 .userName {
     font-size: 46px;
 }
 
-.join-btn {
-    background: white;
-    text-decoration: none;
-    color: #17a2b8!important;
-}
-
-a {
+.btn-create {
     color: #17a2b8;
     border: 1px solid #17a2b8;
     padding: 10px 20px;
@@ -55,9 +44,19 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.btn-create:hover {
     background: #17a2b8;
     color: white;
     text-decoration: none;
 }
 
+nav a {
+    color: #17a2b8;
+    font-weight: 700px;
+    font-size: 26px;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: none;
+}

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './Header.css';
 import NavBar from '../NavBar/NavBar'
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
 
@@ -22,7 +21,7 @@ const Header = (props) => {
                     Create your own or search for other people's recipes below
                 </p>
                 <p>
-                    <Link to='/newRecipe'>
+                    <Link className="create" to='/newRecipe'>
                         Create
                     </Link>
                 </p>
@@ -43,8 +42,8 @@ const Header = (props) => {
                     Create, share, and find your favourite recipes. 
                 </p>
                 <p>
-                    <Link to='/newRecipe'>
-                        Create
+                    <Link className="btn-create" to='/signup'>
+                        Join
                     </Link>
                 </p>
             </Jumbotron>
