@@ -93,7 +93,7 @@ class CreateRecipePage extends Component {
                 </button>
                 &nbsp;&nbsp;
                 <Link 
-                  to='/'
+                  to='/account'
                 >
                   Cancel
                 </Link>
