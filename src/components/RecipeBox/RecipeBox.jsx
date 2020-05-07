@@ -29,7 +29,6 @@ class RecipeBox extends Component {
             <RecipeCard key={idx} recipe={recipe} location={this.props.location} createdBy={recipe.createdBy}/>
         ));
 
-        
         let recipeBox = this.props.user ?
             <Container>
                {this.props.location && this.props.location.pathname === "/account" && <Nav variant="tabs" defaultActiveKey="/">
@@ -40,9 +39,12 @@ class RecipeBox extends Component {
                         <Nav.Link eventKey="link-1"> Saved Recipes</Nav.Link>
                     </Nav.Item>
                 </Nav>}
-                <CardColumns>
+                {this.props.location && this.props.location.pathname === "/account" && <CardColumns>
                     {myRecipeCard}
-                </CardColumns>
+                </CardColumns>}
+                {this.props.location && this.props.location.pathname === "/" && <CardColumns>
+                    {recipeCard}
+                </CardColumns>}
             </Container>
             :
             <Container>
