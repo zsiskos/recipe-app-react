@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 button:focus, .btn:focus {
   outline: none;
 }

@@ -5,6 +5,7 @@
 
 h1 {
   font-size: 60px;
+  margin-top: 60px;
 }
 
 p {
@@ -59,4 +60,36 @@ nav a {
 
 nav a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .jumbotron h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 30px;
+  }
+
+  .jumbotron p {
+    font-size: 15px;
+  }
+                         
+  .navbar a {
+    font-size: 18px;  
+  }
+
+  .jumbotron p {
+    font-size: 0px;
+    
+  }
+
+  .btn-create {
+    color: #17a2b8;
+    border: 1px solid #17a2b8;
+    padding: 5px 10px;
+    border-radius: 9%;
+    background: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+  }
 }

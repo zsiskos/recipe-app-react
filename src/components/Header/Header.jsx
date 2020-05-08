@@ -16,12 +16,12 @@ const Header = (props) => {
         />
         <Jumbotron>
           <h1>Add to your recipe box</h1>
-          <p>Create your own or search for other people's recipes below\</p>
-          <p>
+          <p>Create your own or search the recipes below</p>
+      
             <Link className="btn-create" to="/newRecipe">
               Create
             </Link>
-          </p>
+          
         </Jumbotron>
       </Container>
     </Container>
