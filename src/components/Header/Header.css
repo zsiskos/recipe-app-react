@@ -1,62 +1,62 @@
 .jumbotron {
-    background-color:rgb(39,39,39, 0.2);
-    color: white;
+  background-color:rgb(39,39,39, 0.2);
+  color: white;
 }
 
 h1 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .con-head {
-    background: url('../../images/kitchen-blue.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+  background: url('../../images/kitchen-blue.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .col-small {
-    padding: 15px;
-    display: flex;
-    flex-direction:  column;
-    justify-content: center;
+  padding: 15px;
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
 }
 
 .col-small-user {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .userName {
-    font-size: 46px;
+  font-size: 46px;
 }
 
 .btn-create {
-    color: #17a2b8;
-    border: 1px solid #17a2b8;
-    padding: 10px 20px;
-    border-radius: 9%;
-    background: white;
-    font-weight: 600;
-    text-decoration: none;
+  color: #17a2b8;
+  border: 1px solid #17a2b8;
+  padding: 10px 20px;
+  border-radius: 9%;
+  background: white;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .btn-create:hover {
-    background: #17a2b8;
-    color: white;
-    text-decoration: none;
+  background: #17a2b8;
+  color: white;
+  text-decoration: none;
 }
 
 nav a {
-    color: #17a2b8;
-    font-weight: 700px;
-    font-size: 26px;
-    padding: 0 10px;
+  color: #17a2b8;
+  font-weight: 700px;
+  font-size: 26px;
+  padding: 0 10px;
 }
 
 nav a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }

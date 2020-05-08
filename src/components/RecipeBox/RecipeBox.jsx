@@ -58,7 +58,6 @@ class RecipeBox extends Component {
             <div>
                 {recipeBox}
             </div>
-
         )
     }
 }

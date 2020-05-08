@@ -6,7 +6,6 @@ import './CookingLottie.css'
 
 class CookingLottie extends Component {
 
-
   render(){
 
     const defaultOptions = {

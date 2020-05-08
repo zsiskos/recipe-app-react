@@ -3,14 +3,13 @@ import Card from 'react-bootstrap/Card'
 import './RecipeCard.css'
 
 const RecipeCard = props => {
+  
+    
     return (
           <Card >
             <Card.Img 
                 variant="top"
-                // src='https://i.imgur.com/51COkw0.png'
                 src={props.recipe.photo[0] ? props.recipe.photo[0] : 'https://i.imgur.com/51COkw0.png'}
-
-
             />
             <Card.Body>
                 <Card.Title>{props.recipe.title} ({props.recipe.category})</Card.Title>
