@@ -21,7 +21,7 @@ const Header = (props) => {
                     Create your own or search for other people's recipes below
                 </p>
                 <p>
-                    <Link className="create" to='/newRecipe'>
+                    <Link className="btn-create" to='/newRecipe'>
                         Create
                     </Link>
                 </p>
