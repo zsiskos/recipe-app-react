@@ -26,13 +26,13 @@ Additional features that will be worked on for future versions inlude:
 
 
 ## Using the app
-![landing page](https://i.imgur.com/DA3SnNA.png) 
+![landing page](https://i.imgur.com/DA3SnNA.png "Home page") 
 
-![signup](https://i.imgur.com/eO3qjdt.png)
+![signup](https://i.imgur.com/eO3qjdt.png "Sign up form")
 
-![profilepage](https://i.imgur.com/G6RUs36.png)
+![profilepage](https://i.imgur.com/G6RUs36.png "User profile")
 
-![create a recipe](https://i.imgur.com/GvuYOR0.png)
+![create a recipe](https://i.imgur.com/GvuYOR0.png "Create a Recipe")
 
 ----
 
