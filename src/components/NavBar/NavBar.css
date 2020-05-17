@@ -10,10 +10,6 @@ nav a:hover {
 }
 
 @media (max-width: 576px) {
-  .navbar {
-  
-  }
-
   .navbar a {
     font-size: 18px;
   }
