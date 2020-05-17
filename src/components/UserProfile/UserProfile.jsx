@@ -27,6 +27,7 @@ const UserProfile = (props) => {
                     style={{
                       alignSelf: 'center',
                       maxWidth: '100%',
+                      minWidth: 50,
                       height: 'auto',
                       borderWidth: 1,
                       borderRadius: 75,

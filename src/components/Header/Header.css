@@ -1,6 +1,9 @@
+
+
 .jumbotron {
   background-color:rgb(39,39,39, 0.2);
   color: white;
+  padding: 0px!important;
 }
 
 h1 {
@@ -9,14 +12,16 @@ h1 {
 }
 
 p {
-  font-size: 20px;
+  font-size: clamp(1rem, 2.25vw, 2.25rem);
 }
 
 .con-head {
   background: url('../../images/kitchen-blue.svg');
   background-repeat: no-repeat;
   background-size: 100%;
+
 }
+
 
 .col-small {
   padding: 15px;
@@ -32,7 +37,7 @@ p {
 }
 
 .userName {
-  font-size: 46px;
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 .btn-create {
@@ -71,11 +76,6 @@ nav a:hover {
                          
   .navbar a {
     font-size: 18px;  
-  }
-
-  .jumbotron p {
-    font-size: 0px;
-    
   }
 
   .btn-create {
