@@ -26,8 +26,8 @@ const UserProfile = (props) => {
                     src={props.user.photo ? props.user.photo : "https://quiviracoalition.org/wp-content/uploads/2019/02/generic-person-icon-300x300.png"}
                     style={{
                       alignSelf: 'center',
-                      height: 150,
-                      width: 150,
+                      maxWidth: '100%',
+                      height: 'auto',
                       borderWidth: 1,
                       borderRadius: 75,
                       border: '1px solid white'
@@ -35,7 +35,8 @@ const UserProfile = (props) => {
                 />
               </Col>
               <Col className='col-bigger'>
-                <p className='userName'>{props.user.userName}</p>
+                <h1 className='userName'>{props.user.userName}
+                </h1>
                 <p>Food preferences:{props.user.foodPreferences}</p>
                 <p>Member since: {formattedDate}</p>                    
               </Col>
