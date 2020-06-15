@@ -4,7 +4,6 @@ import './RecipeCard.css'
 
 const RecipeCard = props => {
   
-    
     return (
           <Card >
             <Card.Img 

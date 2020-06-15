@@ -9,6 +9,7 @@ import SignupPage from '../../pages/SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
 import CreateRecipePage from '../CreateRecipePage/CreateRecipePage';
 import UserProfile from '../../components/UserProfile/UserProfile';
+import Recipe from '../../components/Recipe/Recipe'
 
 class App extends Component {
   constructor() {
@@ -92,9 +93,7 @@ class App extends Component {
                 handleSignupOrLogin={this.handleSignupOrLogin}
               />
           }/>
-          <Route 
-            path='/newRecipe' 
-            render={({ history }) => (
+          <Route path='/newRecipe' render={({ history }) => (
               userService.getUser() ?
                 <CreateRecipePage
                   history={history} 
@@ -103,6 +102,15 @@ class App extends Component {
               :
               <Redirect to='/login' />
           )}/>
+
+          <Route path='/recipe'render={({ location }) => (
+            <Recipe 
+              location={location}
+            />
+          )}
+          />
+
+          
         </Switch>
       </div>
     );
