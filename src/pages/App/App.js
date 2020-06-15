@@ -103,7 +103,7 @@ class App extends Component {
               <Redirect to='/login' />
           )}/>
 
-          <Route path='/recipe'render={({ location }) => (
+          <Route path='/recipe/:recipeId'render={({ location }) => (
             <Recipe 
               location={location}
             />
